@@ -55,12 +55,9 @@ class Vote
         break
       end
 
-      match = /^( ?\d\d\. )?([A-Za-z ]+ \(Team 8\))/.match(line)
-      member_name = if match
-                      match[2].strip
-                    else
-                      /^( ?\d\d\. )([A-Za-z ]+)/.match(line)[2].strip
-                    end
+      regex = line =~ /Team 8/ ? /^( ?\d\d\. )?([A-Za-z ]+ \(Team 8\))/ : /^( ?\d\d\. )?([A-Za-z ]+)/
+      match = regex.match(line)
+      member_name = match[2].strip
       @members << member_name
       unless @girls[member_name]
         valid = false
