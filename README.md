@@ -11,11 +11,11 @@ Every voting file:
 - has blank line after 20 positive votes (only if you have negative votes)
 - has 0 to 5 negative votes, put after the blank line (with no blank lines in between)
 - has no trailing blank lines
+- has no duplicate members in different lines
 - can be in `.txt` or no extension
 
 Every line in voting file:
 - has eligible member's name (refer to ithebigc's opening post)
-- no duplicate members
 - has to be sorted from your number 1 to number 25 (and don't forget the blank line between the positive votes and negative ones)
 - doesn't need that vote value, why bother typing it if computer can do it
 - can have line number or not, whatever pleases you
