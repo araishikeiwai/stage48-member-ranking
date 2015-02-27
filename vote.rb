@@ -55,7 +55,7 @@ class Vote
         break
       end
 
-      regex = line =~ /Team 8/ ? /^( ?\d\d\. )?([A-Za-z ]+ \(Team 8\))/ : /^( ?\d\d\. )?([A-Za-z ]+)/
+      regex = line =~ /Team 8/ ? /^( ?\d?\d\.? ?)?([A-Za-z ]+ \(Team 8\))/ : /^( ?\d?\d\.? ?)?([A-Za-z ]+)/
       match = regex.match(line)
       member_name = match[2].strip
       @members << member_name
